@@ -1,0 +1,12 @@
+@(transForm:play.data.Form[Transaction])
+@import helper._
+
+<html>
+    <body>
+        @helper.form(action = routes.TransactionController.saveDebit()){
+            @helper.inputText(transForm("transaction"))
+            <input type="Submit" value="Add"/>
+        }
+        <form action="/"><input type="submit" value="Back"/></form>
+    </body>
+</html>

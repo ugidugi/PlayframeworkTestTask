@@ -1,0 +1,11 @@
+@(person: Person)
+
+<html>
+    <body>
+        <h3>Name: @person.name</h3>
+        <h3>Balance: @person.balance</h3>
+        <form action="/debit"><input type="submit" value="Add to balance"/></form>
+        <form action="/credit"><input type="submit" value="Make money transfer"/></form>
+        <form action="/history"><input type="submit" value="Show transaction history"/></form>
+    </body>
+</html>

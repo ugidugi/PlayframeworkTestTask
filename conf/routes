@@ -1,0 +1,13 @@
+
+GET     /                           controllers.TransactionController.index()
+GET     /history                    controllers.TransactionController.history()
+GET     /exception/:exception       controllers.TransactionController.exception(exception: String)
+GET     /debit                      controllers.TransactionController.debit()
+GET     /credit                     controllers.TransactionController.credit()
+POST    /debit                      controllers.TransactionController.saveDebit()
+POST    /credit                     controllers.TransactionController.saveCredit()
+
+
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+
+      
