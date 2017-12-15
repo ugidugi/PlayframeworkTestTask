@@ -12,8 +12,7 @@
                 <th>Status</th>
             </tr>
         @for(t <- transactions){
-            @if(t.transaction<0){
-            <tr bgcolor="#e9967a">
+            <tr @if(t.transaction<0){bgcolor="#e9967a"}else{bgcolor="#7fffd4"}>
                 <th>@t.id</th>
                 <th>@t.getDateFormat</th>
                 <th>@t.recipient</th>
@@ -21,16 +20,6 @@
                 <th>@t.lostBalance</th>
                 <th>@t.status</th>
             </tr>
-            }else{
-            <tr bgcolor="#7fffd4">
-                <th>@t.id</th>
-                <th>@t.getDateFormat</th>
-                <th>@t.recipient</th>
-                <th>@t.transaction</th>
-                <th>@t.lostBalance</th>
-                <th>@t.status</th>
-            </tr>
-            }
         }
         </table>
         <form action="/"><input type="submit" value="Back"/></form>
